@@ -1,0 +1,13 @@
+<div class=pagination>
+  {% if pagination.has_prev -%}
+    <a href="{{ link_to(pagination.url_key, page=pagination.page - 1) }}" title="Précédent" class="icon previous-link">&laquo; Previous</a>
+  {%- else -%}
+    <span class="disabled icon previous-link">&laquo; Précédent</span>
+  {%- endif %}{#
+  #} — <strong>{{ pagination.page }}</strong> — {#
+  #}{% if pagination.has_next -%}
+    <a href="{{ link_to(pagination.url_key, page=pagination.page + 1) }}" title="Suivant" class="icon next-link">Suivant &raquo;</a>
+  {%- else -%}
+    <span class="disabled icon next-link">Suivant &raquo;</span>
+  {%- endif %}
+</div>

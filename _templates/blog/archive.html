@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}Archives{% endblock %}
+
+{% block navigation_class %}archives{% endblock %}
+
+{% block body %}
+  <h1><a href="{{ link_to('blog_archive') }}">Archives</a></h1>
+
+  <ul class=blog-archive>
+  {%- for entry in archive %}
+    <li><a href="{{ link_to('blog_archive', year=entry.year) }}">{{ entry.year }}</a>
+      <ul>
+      {%- for subentry in entry.months %}
+        <li><a href="{{ link_to('blog_archive', year=entry.year,
+                                month=subentry.month) }}">{{ subentry.month_name }}</a>
+          — {{ subentry.count }} {{ 'billet' if subentry.count == 1 else 'billets' }}
+      {%- endfor %}
+      </ul>
+  {%- endfor %}
+  </ul>
+{% endblock %}

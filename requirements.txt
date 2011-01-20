@@ -1,0 +1,5 @@
+werkzeug
+Sphinx==1.0.7
+Fabric
+
+-e git+git://github.com/thoas/rstblog.git@c78c51b163885a62c9a04c2f605aa034ccce1d05#egg=rstblog

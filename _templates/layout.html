@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        {% block htmlhead %}
+        <title>{% block title %}Accueil{% endblock %} | Vimagneto</title>
+        <link href="http://fonts.googleapis.com/css?family=Vollkorn&subset=latin" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/static/style.css" type="text/css">
+        <link href="{{ link_to('blog_feed') }}" rel="alternate" title="Recent Blog Posts" type="application/atom+xml">
+
+        {%- for link in links %}
+        <link rel="{{ link.rel }}" href="{{ link.href }}"{%
+        if link.media %} media="{{ link.media }}"{% endif %} type="{{ link.type }}">
+        {%- endfor %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container">
+            <header id="main-header">
+                <h1 id="logo" class="icon">
+                    <a href="/">Vimagneto</a>
+                </h1>
+                <nav id="main-navigation" class="{% block navigation_class %}main{% endblock %}">
+                    <ul>
+                        <li class="home"><a class="icon" href="/" title="Episodes">Episodes</a>
+                        <li class="about"><a class="icon" href="/a-propos/" title="A propos">A propos</a>
+                        <li class="tags"><a class="icon" href="/tags/" title="Tags">Tags</a>
+                        <li class="archives"><a class="icon" href="/archive/" title="Archives">Archives</a>
+                        <li class="feed"><a class="icon" href="{{ link_to('blog_feed') }}" title="Syndication">Syndication</a>
+                        <li class="twitter"><a class="icon" href="http://twitter.com/thoas" title="Twitter">Twitter</a>
+                        <li class="apil"><a class="icon" href="http://apluggedinlife.com/" title="A plugged in life">A plugged in life</a>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+            </header>
+            <div class="body">
+                {% block body %}{% endblock %}
+            </div>
+            <footer id="main-footer">
+                <div id="creative-commons">
+                    <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" class="icon" title="Creative Commons attribution-noncommercial-sharealike">
+                        Le contenu de ce site vous est délivré sous la licence
+                        Creative Commons attribution-noncommercial-sharealike.
+                    </a>
+                </div>
+                <div id="copyright">&copy; Copyright {{ format_date(format='YYYY') }} Florent Messa</div>
+                <div id="apluggedinlife">
+                    <a href="http://apluggedinlife.com" class="icon" title="A plugged in life">
+                        A plugged in life
+                    </a>
+                </div>
+                <div class="clear"></div>
+            </footer>
+        </div>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-5309752-6']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+    </body>
+</html>

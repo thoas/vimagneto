@@ -1,0 +1,11 @@
+---
+active_modules: [pygments, tags, blog]
+author: Florent Messa
+locale: fr
+feed:
+    name: 'Vimagneto'
+    subtitle: 'Les derniers episodes'
+canonical_url: http://vimagneto.apluggedinlife.com
+modules:
+  pygments:
+    style: tango
