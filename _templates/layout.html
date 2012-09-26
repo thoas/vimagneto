@@ -6,7 +6,8 @@
         <title>{% block title %}Accueil{% endblock %} | Vimagneto</title>
         <link href="http://fonts.googleapis.com/css?family=Vollkorn&subset=latin" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="/static/style.css" type="text/css">
-        <link href="{{ link_to('blog_feed') }}" rel="alternate" title="Recent Blog Posts" type="application/atom+xml">
+        <link href="{{ link_to('blog_feed') }}" rel="alternate" title="Vimagneto : les derniers episodes" type="application/atom+xml">
+        <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
 
         {%- for link in links %}
         <link rel="{{ link.rel }}" href="{{ link.href }}"{%
@@ -62,6 +63,16 @@
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
+        </script>
+        <script type="text/javascript">
+            var disqus_shortname = 'vimagneto';
+
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
         </script>
     </body>
 </html>

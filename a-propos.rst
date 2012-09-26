@@ -4,63 +4,82 @@ template: about.html
 A propos
 ========
 
-What is Lorem Ipsum?
---------------------
+Qu'est-ce que Vimagneto ?
+-------------------------
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-when an unknown printer took a galley of type and scrambled it to make 
-a type specimen book. It has survived not only five centuries, but also the
-leap into electronic typesetting, remaining essentially unchanged.
-It was popularised in the 1960s with the release of Letraset sheets containing
-Lorem Ipsum passages, and more recently with desktop publishing software
-like Aldus PageMaker including versions of Lorem Ipsum.
+Sur le modèle de `Vimcasts`_ produit par `Drew Neil <http://drewneil.com/>`_, 
+Vimagneto publie des tutoriels vidéos en français à propos de l'éditeur de texte Vim.
 
-What do you use it?
--------------------
+L'idée principale n'est pas de traduire simplement les vidéos
+réalisées par `Vimcasts`_ mais de partager mes experiences d'utilisateur Vim.
 
-It is a long established fact that a reader will be distracted by the
-readable content of a page when looking at its layout. The point of using
-Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-as opposed to using 'Content here, content here', making it look like readable
-English. Many desktop publishing packages and web page editors now use
-Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
-uncover many web sites still in their infancy.
-Various versions have evolved over the years, sometimes by accident,
-sometimes on purpose (injected humour and the like).
+Il est bien connu que la courbe d'apprentissage de Vim est très lente.
+Vimagneto essaie de simplifier la compréhension et l'assimilation de ce
+modèle d'édition pour accroître son efficacité.
 
-Where does it come from?
+Les `patterns` d'utilisation de Vim ne sont pas facilement accessible
+au début de son apprentissage et font de Vim un outil relativement complexe
+à maîtriser. La meilleure façon de les appréhender reste de voir directement
+quelqu'un s'en servir.
+
+Par le biais de courtes vidéos (maximum 10 minutes) qui contiennent des
+conseils d'utilisation, Vimagneto vous donne des éléments qui augmenteront
+votre productivité.
+
+A propos du nom de ce site
+--------------------------
+
+Reprendre le nom `Vimcasts`_ avec le domaine `.fr` ne permettait pas de se demarquer
+suffisamment.
+D'autant qu'en plus les tutoriels publiés ne puisent pas leur inspiration essentiellement
+de `Vimcasts`_.
+
+Le nom de ce site m'a donc été donné par une
+`source inépuisable d'inspiration <http://norelijn.pluggedinlife.com>`_ et joue
+sur le côté retro grâce au bon vieux retour du magnetoscope.
+
+Qui est derrière Vimagneto ?
+----------------------------
+
+`Florent Messa <http://thoas.apluggedinlife.com>`_ (aka `thoas <http://twitter.com/thoas>`_)
+est derrière Vimagneto (Alain Delon, sors de ce corps !).
+
+Je suis passé par plusieurs usines à gaz (IDE). Au final, du fait notamment d'un manque
+de mise à jour de TextMate, j'ai abandonné celui-ci et opté pour Vim.
+
+Après utilisation, j'ai été convaincu par ses multiples possibilités
+et je souhaite maintenant offrir un petit retour d'expérience.
+
+Je ne suis pas `expert`, il me reste encore beaucoup de choses à apprendre et
+j'espère que ce site sera aussi une opportunité d'en apprendre davantage d'autres
+utilisateurs.
+
+Configuration spécifique
 ------------------------
 
-Contrary to popular belief, Lorem Ipsum is not simply random text.
-It has roots in a piece of classical Latin literature from 45 BC, making
-it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-College in Virginia, looked up one of the more obscure Latin words, consectetur,
-from a Lorem Ipsum passage, and going through the cites of the word in classical
-literature, discovered the undoubtable source.
-Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of
-"de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
-written in 45 BC. This book is a treatise on the theory of ethics,
-very popular during the Renaissance.
-The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
-comes from a line in section 1.10.32.
+Pour ceux que ça intéresserait, le thème de couleur utilisé pour faire ces tutoriels vidéos
+est `ir_black`_ et la police de caractères est Monaco. Je vous invite à jeter un coup d'oeil à mon
+`vimrc disponible sur GitHub <http://github.com/thoas/vimconfig>`_.
 
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below
-for those interested. Sections 1.10.32 and 1.10.33 from
-"de Finibus Bonorum et Malorum" by Cicero are also reproduced in their
-exact original form, accompanied by English versions from the 1914 translation
-by H. Rackham.
+A propos des vidéos
+-------------------
 
-Where can I get some?
----------------------
+Toutes les vidéos sont disponibles sur `Vimeo <http://vimeo.com/>`_ et seront
+prochainement offertes en téléchargement lorsque qu'un hébergeur avec une
+bande passante convenable sera trouvé.
 
-There are many variations of passages of Lorem Ipsum available, but the majority
-have suffered alteration in some form, by injected humour, or randomised words
-which don't look even slightly believable. If you are going to use a passage
-of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
-in the middle of text. All the Lorem Ipsum generators on the Internet tend
-to repeat predefined chunks as necessary, making this the first true generator
-on the Internet. It uses a dictionary of over 200 Latin words, combined with a
-handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
-The generated Lorem Ipsum is therefore always free from repetition,
-injected humour, or non-characteristic words etc.
+Ressources
+----------
+
+Toutes mes inspirations pour les vidéos proviennent des sites suivants :
+
+* `Vimcasts`_
+* `Vim Tutorials Videos by Derek Wyatt <http://www.derekwyatt.org/vim/vim-tutorial-videos/>`_
+* `Best Vim Tips <http://vim.wikia.com/wiki/Best_Vim_Tips>`_
+* `Use Vim Like a Pro <http://tottinge.blogsome.com/use-vim-like-a-pro>`_
+* `Efficient Editing With vim <http://jmcpherson.org/editing.html>`_
+* `How I boosted my Vim <http://nvie.com/posts/how-i-boosted-my-vim/>`_
+* `Coming Home to Vim <http://stevelosh.com/blog/2010/09/coming-home-to-vim/>`_
+
+.. _Vimcasts: http://vimcasts.org
+.. _ir_black: http://blog.toddwerth.com/entries/show/8

@@ -6,44 +6,46 @@
 
 {% block body %}
     {%- if not config.hide_title %}
-      {{ rst.html_title }}
+    {{ rst.html_title }}
     {%- endif %}
 
     {% if ctx.pub_date %}
-    <p class="date">écrit le {{ format_date(ctx.pub_date, format='full') }}
+        <p class="date">écrit le {{ format_date(ctx.pub_date, format='full') }}
     {% endif %}
 
-    {{ rst.fragment }}
+    <div id="entry">
+        {{ rst.fragment }}
+    </div>
 
     <div class="entry-information">
-    {% if ctx.tags %}
-        <p class="tags">Ce billet à été tagué
-        {% for tag in ctx.tags|sort(case_sensitive=true) %}
+        {% if ctx.tags %}
+            <p class="tags">Ce billet à été tagué
+            {% for tag in ctx.tags|sort(case_sensitive=true) %}
             {%- if not loop.first and not loop.last %}, {% endif -%}
-            {%- if loop.last and not loop.first %} et {% endif %}
-            <a href="{{ link_to('tag', tag=tag) }}" title="{{ tag }}">{{ tag }}</a>
+        {%- if loop.last and not loop.first %} et {% endif %}
+        <a href="{{ link_to('tag', tag=tag) }}" title="{{ tag }}">{{ tag }}</a>
         {%- endfor %}
         </p>
     {% endif %}
-        <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-        <iframe src="http://www.facebook.com/plugins/like.php?href={{ ctx.config.get('canonical_url') }}/{{ ctx.slug }}&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe> 
-    </div>
+    <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <iframe src="http://www.facebook.com/plugins/like.php?href={{ ctx.config.get('canonical_url') }}/{{ ctx.slug }}&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe> 
+</div>
 
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        var disqus_shortname = 'vimagneto'; // required: replace example with your forum shortname
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'vimagneto'; // required: replace example with your forum shortname
 
-        // The following are highly recommended additional parameters. Remove the slashes in front to use.
-        var disqus_identifier = '{{ ctx.slug }}';
-        var disqus_developer = 1;
-        var disqus_url = '{{ ctx.config.get('canonical_url') }}/{{ ctx.slug }}';
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    var disqus_identifier = '{{ ctx.slug }}';
+    var disqus_developer = 1;
+    var disqus_url = '{{ ctx.config.get('canonical_url') }}/{{ ctx.slug }}';
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 {% endblock %}

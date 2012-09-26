@@ -7,6 +7,11 @@ vim: set et ts=4 sts=4 fdm=marker fenc=utf-8:
 /* @section GENERIC ELEMENTS {{{
  ******************************************************************************/
 
+article, aside, dialog, figure, footer, header,
+hgroup, menu, nav, section { 
+    display: block; 
+}
+
 body {
     font: 18px/25px 'Palatino', 'Palatino Linotype', 'Georgia', serif;
     margin: 0;
@@ -43,13 +48,13 @@ li {
     padding: 0;
 }
 
-table {
+#entry table {
     border: 1px solid #ddd;
     border-collapse: collapse;
     background: #fafafa;
 }
 
-td,th {
+#entry td,th {
     padding: 2px 12px;
     border: 1px solid #ddd;
 }
@@ -65,11 +70,11 @@ h1,h2,h3,h4,h5,h6 {
     color: #222;
 }
 
-h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a, div.comment-count a {
     text-decoration: none;
 }
 
-h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover {
+h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover, div.comment-count a:hover {
     text-decoration: underline;
 }
 
@@ -115,6 +120,7 @@ div.body, h1#logo, #main-footer {
 }
 
 div.body {
+    min-height: 400px;
     clear: both;
 }
 
@@ -292,6 +298,7 @@ div.entry-overview:not(:last-child) {
 }
 
 div.entry-overview h1,
+div.entry-overview div.comment-count,
 div.entry-overview div.summary,
 div.entry-overview div.summary p {
     display: inline;
@@ -324,6 +331,10 @@ div.entry-overview div.date {
 
 div.entry-overview h1:after {
     content: " —";
+}
+
+div.entry-overview div.comment-count:before {
+    content: "— ";
 }
 
 ul.tagcloud {

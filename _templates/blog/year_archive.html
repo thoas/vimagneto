@@ -5,13 +5,13 @@
 {% block navigation_class %}archives{% endblock %}
 
 {% block body %}
-  <h1><a href="{{ link_to('blog_archive') }}" title="Archives">Archives</a> pour {{ entry.year }}</h1>
+    <h1><a href="{{ link_to('blog_archive') }}" title="Archives">Archives</a> pour {{ entry.year }}</h1>
 
-  <ul class=blog-archive>
-    {%- for subentry in entry.months %}
-      <li><a href="{{ link_to('blog_archive', year=entry.year,
-              month=subentry.month) }}" title="{{ subentry.month_name }}">{{ subentry.month_name }}</a>
+    <ul class=blog-archive>
+        {%- for subentry in entry.months %}
+        <li><a href="{{ link_to('blog_archive', year=entry.year,
+            month=subentry.month) }}" title="{{ subentry.month_name }}">{{ subentry.month_name }}</a>
         — {{ subentry.count }} {{ 'billet' if subentry.count == 1 else 'billets' }}
-    {%- endfor %}
-  </ul>
+        {%- endfor %}
+    </ul>
 {% endblock %}
